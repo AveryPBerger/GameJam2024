@@ -1,2 +1,3 @@
 # GameJam2024
-Science Game 
+fuck you merrick 
+Science Game
