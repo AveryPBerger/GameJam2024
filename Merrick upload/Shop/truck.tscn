@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://nlanfrlt6wvv"]
+
+[sub_resource type="Gradient" id="Gradient_fc8b8"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_d1tev"]
+gradient = SubResource("Gradient_fc8b8")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="shelf" type="CanvasLayer" parent="."]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-0.140574, -39.027, -0.00497031, 13.8631, -0.395416, -0.00176897, 0.0234498, -0.191611, 1.016, -0.10612, 0.499387, -1.38383)
+modulate = Color(0.396078, 0.396078, 0.396078, 1)
+texture = SubResource("GradientTexture2D_d1tev")

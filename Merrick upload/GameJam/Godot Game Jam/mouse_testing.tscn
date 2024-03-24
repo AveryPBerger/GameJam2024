@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://c0a27sseux4yf"]
+
+[ext_resource type="Script" path="res://mouse_testing.gd" id="1_42euu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yst6l"]
+vertex_color_is_srgb = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_bny4v"]
+material = SubResource("StandardMaterial3D_yst6l")
+
+[sub_resource type="Skin" id="Skin_ihxwv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qvygc"]
+
+[node name="Mouse testing" type="Node3D"]
+script = ExtResource("1_42euu")
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="Box" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23192, 0, -6.61753)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Box"]
+mesh = SubResource("BoxMesh_bny4v")
+skin = SubResource("Skin_ihxwv")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Box"]
+shape = SubResource("BoxShape3D_qvygc")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

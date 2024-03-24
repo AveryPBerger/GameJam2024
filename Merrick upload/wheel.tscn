@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnw5qnx47gf52"]
+
+[ext_resource type="Texture2D" uid="uid://12mtkmwmbw8c" path="res://ASSETS/UI/wheel.png" id="1_3rugf"]
+
+[sub_resource type="GDScript" id="GDScript_mkwob"]
+script/source = "extends StaticBody3D
+
+var rotating = false
+
+var prev_mouse_position
+var next_mouse_position
+var mouse_on = false
+var con = 0
+
+func _process(delta):
+	if (Input.is_action_just_pressed(\"Rotate\")):
+		rotating = true
+		prev_mouse_position = get_viewport().get_mouse_position()
+	if(Input.is_action_just_released(\"Rotate\")):
+		rotating = false
+	if(mouse_on):
+		if(rotating):
+			next_mouse_position = get_viewport().get_mouse_position()
+			rotate_z((next_mouse_position.x - prev_mouse_position.x) * 2 *delta)
+			print((next_mouse_position.x - prev_mouse_position.x) * 2 *delta)
+			con = (next_mouse_position.x - prev_mouse_position.x) * 2 *delta
+			
+
+
+func _on_area_3d_mouse_entered():
+	mouse_on = true
+
+
+func _on_area_3d_mouse_exited():
+	mouse_on = false
+"
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_7wlxm"]
+height = 0.05
+radius = 0.160116
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ffrjd"]
+height = 0.06
+radius = 0.134295
+
+[node name="Wheel" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00131152, 0.014336, 0)
+script = SubResource("GDScript_mkwob")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00698172, -0.0240341, 0)
+pixel_size = 0.001
+texture = ExtResource("1_3rugf")
+
+[node name="Area3D" type="Area3D" parent="Sprite3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sprite3D/Area3D"]
+transform = Transform3D(-0.339756, 4.11112e-08, 0.940514, 0.940514, 1.48512e-08, 0.339756, 2.6865e-16, 1, -4.37114e-08, 0.000235915, 0.0254269, -0.00597078)
+shape = SubResource("CylinderShape3D_7wlxm")
+
+[node name="No area" type="Area3D" parent="Sprite3D"]
+
+[node name="No col" type="CollisionShape3D" parent="Sprite3D/No area"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.025, -0.006)
+shape = SubResource("CylinderShape3D_ffrjd")
+
+[connection signal="mouse_entered" from="Sprite3D/Area3D" to="." method="_on_area_3d_mouse_entered"]
+[connection signal="mouse_exited" from="Sprite3D/Area3D" to="." method="_on_area_3d_mouse_exited"]

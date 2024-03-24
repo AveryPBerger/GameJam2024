@@ -1,0 +1,14 @@
+C:\Users\Home-PC1\OneDrive - John Abbott College\Programming 2\Visual Studios\Assignments\GameJam\bin\Debug\net6.0\GameJam.exe
+C:\Users\Home-PC1\OneDrive - John Abbott College\Programming 2\Visual Studios\Assignments\GameJam\bin\Debug\net6.0\GameJam.deps.json
+C:\Users\Home-PC1\OneDrive - John Abbott College\Programming 2\Visual Studios\Assignments\GameJam\bin\Debug\net6.0\GameJam.runtimeconfig.json
+C:\Users\Home-PC1\OneDrive - John Abbott College\Programming 2\Visual Studios\Assignments\GameJam\bin\Debug\net6.0\GameJam.dll
+C:\Users\Home-PC1\OneDrive - John Abbott College\Programming 2\Visual Studios\Assignments\GameJam\bin\Debug\net6.0\GameJam.pdb
+C:\Users\Home-PC1\OneDrive - John Abbott College\Programming 2\Visual Studios\Assignments\GameJam\obj\Debug\net6.0\GameJam.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Home-PC1\OneDrive - John Abbott College\Programming 2\Visual Studios\Assignments\GameJam\obj\Debug\net6.0\GameJam.AssemblyInfoInputs.cache
+C:\Users\Home-PC1\OneDrive - John Abbott College\Programming 2\Visual Studios\Assignments\GameJam\obj\Debug\net6.0\GameJam.AssemblyInfo.cs
+C:\Users\Home-PC1\OneDrive - John Abbott College\Programming 2\Visual Studios\Assignments\GameJam\obj\Debug\net6.0\GameJam.csproj.CoreCompileInputs.cache
+C:\Users\Home-PC1\OneDrive - John Abbott College\Programming 2\Visual Studios\Assignments\GameJam\obj\Debug\net6.0\GameJam.dll
+C:\Users\Home-PC1\OneDrive - John Abbott College\Programming 2\Visual Studios\Assignments\GameJam\obj\Debug\net6.0\refint\GameJam.dll
+C:\Users\Home-PC1\OneDrive - John Abbott College\Programming 2\Visual Studios\Assignments\GameJam\obj\Debug\net6.0\GameJam.pdb
+C:\Users\Home-PC1\OneDrive - John Abbott College\Programming 2\Visual Studios\Assignments\GameJam\obj\Debug\net6.0\GameJam.genruntimeconfig.cache
+C:\Users\Home-PC1\OneDrive - John Abbott College\Programming 2\Visual Studios\Assignments\GameJam\obj\Debug\net6.0\ref\GameJam.dll

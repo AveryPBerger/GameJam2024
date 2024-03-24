@@ -1,0 +1,57 @@
+[gd_scene load_steps=12 format=3 uid="uid://bt1huusin8ijt"]
+
+[ext_resource type="Script" path="res://Shop/main.gd" id="1_550wl"]
+[ext_resource type="PackedScene" uid="uid://djc1xpferxpkk" path="res://Shop/window.tscn" id="1_x773q"]
+[ext_resource type="Script" path="res://Shop/Cameraclicking.gd" id="2_f711e"]
+[ext_resource type="PackedScene" uid="uid://dqov2xw3gcmhr" path="res://Shop/guy.tscn" id="2_pg345"]
+[ext_resource type="PackedScene" uid="uid://bovyvhflcpqrp" path="res://Shop/control.tscn" id="3_6823o"]
+[ext_resource type="Script" path="res://Shop/View 1.gd" id="3_hox32"]
+[ext_resource type="Script" path="res://Shop/customer.gd" id="4_bt62h"]
+[ext_resource type="PackedScene" uid="uid://nlanfrlt6wvv" path="res://Shop/truck.tscn" id="4_p4gtq"]
+[ext_resource type="Script" path="res://Shop/View 2.gd" id="8_cf0b1"]
+[ext_resource type="PackedScene" uid="uid://bnw5qnx47gf52" path="res://wheel.tscn" id="8_kvwwk"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_tossk"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_550wl")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.728556, 0.335056, 1.35878)
+script = ExtResource("2_f711e")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+
+[node name="View 1" type="Node3D" parent="."]
+transform = Transform3D(0.0935947, 0, 0, 0, 0.0935947, 0, 0, 0, 0.0935947, -0.00732747, 0.369606, 0.419945)
+script = ExtResource("3_hox32")
+
+[node name="customerWindow" parent="View 1" instance=ExtResource("1_x773q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.02474)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="View 1"]
+
+[node name="Customer" parent="View 1" instance=ExtResource("2_pg345")]
+transform = Transform3D(0.536868, 0, 0, 0, 0.536868, 0, 0, 0, 0.536868, -3.68415, -0.70239, -1.5653)
+script = ExtResource("4_bt62h")
+
+[node name="Dialogue Box" parent="View 1" instance=ExtResource("3_6823o")]
+
+[node name="table" type="MeshInstance3D" parent="View 1"]
+transform = Transform3D(40.8988, 0, 0, 0, 2.61929, 0, 0, 0, 3.50644, 10.7627, -4.76572, 2.36397)
+mesh = SubResource("BoxMesh_tossk")
+skeleton = NodePath("../..")
+
+[node name="View 2" type="Node3D" parent="."]
+transform = Transform3D(0.24, 0, 0, 0, 0.24, 0, 0, 0, 0.24, 1.56183, 0.15745, 0.593935)
+script = ExtResource("8_cf0b1")
+
+[node name="lab" parent="View 2" instance=ExtResource("4_p4gtq")]
+transform = Transform3D(1, 0, -7.10543e-15, 0, 1, 0, 7.10543e-15, 0, 1, -4.16667, 1.64074, -2.6957)
+
+[node name="Wheel" parent="View 2" instance=ExtResource("8_kvwwk")]
+transform = Transform3D(-4.16667, 0, -3.64262e-07, 0, 4.16667, 0, 3.64262e-07, 0, -4.16667, -0.543564, 1.68734, -0.617895)
+
+[connection signal="lookAtLab" from="." to="View 1/Dialogue Box" method="_on_node_3d_look_at_lab"]
+[connection signal="lookAtWindow" from="." to="View 1/Dialogue Box" method="_on_node_3d_look_at_window"]

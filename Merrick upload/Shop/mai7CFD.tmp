@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://bt1huusin8ijt"]
+
+[ext_resource type="Script" path="res://Shop/main.gd" id="1_550wl"]
+[ext_resource type="PackedScene" uid="uid://djc1xpferxpkk" path="res://Shop/window.tscn" id="1_x773q"]
+[ext_resource type="PackedScene" uid="uid://dqov2xw3gcmhr" path="res://Shop/guy.tscn" id="2_pg345"]
+[ext_resource type="PackedScene" uid="uid://bovyvhflcpqrp" path="res://Shop/control.tscn" id="3_6823o"]
+[ext_resource type="PackedScene" uid="uid://nlanfrlt6wvv" path="res://Shop/truck.tscn" id="4_p4gtq"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_tossk"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_550wl")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00163993, 0.379532, 0.977945)
+
+[node name="Sprite3D" parent="." instance=ExtResource("1_x773q")]
+transform = Transform3D(0.0935947, 0, 0, 0, 0.0935947, 0, 0, 0, 0.0935947, -0.00732747, 0.369606, 0.419945)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+[node name="Sprite3D2" parent="." instance=ExtResource("2_pg345")]
+transform = Transform3D(0.050248, 0, 0, 0, 0.050248, 0, 0, 0, 0.050248, -0.352144, 0.303866, 0.273441)
+
+[node name="Dialogue Box" parent="." instance=ExtResource("3_6823o")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.31997, 0, 0, 0, 0.245152, 0, 0, 0, 0.328184, 0, -0.0764403, 0.6412)
+mesh = SubResource("BoxMesh_tossk")
+
+[node name="Node3D" parent="." instance=ExtResource("4_p4gtq")]
+transform = Transform3D(-0.24, 0, 2.09815e-08, 0, 0.24, 0, -2.09815e-08, 0, -0.24, 0, 0, 2)

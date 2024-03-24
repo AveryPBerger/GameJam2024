@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4ac8d13m56ug"]
+
+[ext_resource type="Texture2D" uid="uid://brl72ignigrdo" path="res://ASSETS/Truck/flasks_spritesheet.png" id="1_g1a4a"]
+
+[node name="Sprite3D" type="Sprite3D"]
+texture = ExtResource("1_g1a4a")
+hframes = 3
+vframes = 2

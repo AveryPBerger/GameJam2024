@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bup37o7lqlirn"]
+
+[ext_resource type="Texture2D" uid="uid://7uq42pr58i4d" path="res://ASSETS/UI/textBox.png" id="1_pantf"]
+
+[node name="TextureRect" type="TextureRect"]
+offset_left = 62.0
+offset_top = -20.0
+offset_right = 1952.0
+offset_bottom = 1397.0
+scale = Vector2(0.510812, 0.516854)
+texture = ExtResource("1_pantf")

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://djc1xpferxpkk"]
+
+[ext_resource type="Texture2D" uid="uid://jk8nfjj0ho4d" path="res://ASSETS/Truck/Truck Window.png" id="1_8ou68"]
+
+[node name="Sprite3D" type="Sprite3D"]
+layers = 3
+texture = ExtResource("1_8ou68")
