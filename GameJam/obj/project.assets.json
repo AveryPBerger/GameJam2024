@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Home-PC1\\OneDrive - John Abbott College\\Programming 2\\Visual Studios\\Assignments\\GameJam\\GameJam.csproj",
+      "projectUniqueName": "C:\\Users\\Home-PC1\\GameJam2024\\GameJam\\GameJam.csproj",
       "projectName": "GameJam",
-      "projectPath": "C:\\Users\\Home-PC1\\OneDrive - John Abbott College\\Programming 2\\Visual Studios\\Assignments\\GameJam\\GameJam.csproj",
+      "projectPath": "C:\\Users\\Home-PC1\\GameJam2024\\GameJam\\GameJam.csproj",
       "packagesPath": "C:\\Users\\Home-PC1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Home-PC1\\OneDrive - John Abbott College\\Programming 2\\Visual Studios\\Assignments\\GameJam\\obj\\",
+      "outputPath": "C:\\Users\\Home-PC1\\GameJam2024\\GameJam\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
