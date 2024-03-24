@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqov2xw3gcmhr"]
+
+[ext_resource type="Texture2D" uid="uid://dom3y0mlei81x" path="res://ASSETS/Guys/CitrusGuy.png" id="1_vess1"]
+
+[node name="Sprite3D" type="Sprite3D"]
+texture = ExtResource("1_vess1")
